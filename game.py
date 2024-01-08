@@ -47,12 +47,11 @@ class NumberGuessingGame:
 
         self.window.mainloop()
 
-    def initialize_game(self):
-        # Generate a random number based on the selected mode
+    def initialize_game(self):   
         if self.mode_var.get() == "Odd":
-            self.secret_number = random.randint(1, 50) * 2 - 1  # Ensures the number is odd and between 1 and 100
+            self.secret_number = random.randint(1, 50) * 2 - 1 
         elif self.mode_var.get() == "Even":
-            self.secret_number = random.randint(1, 50) * 2  # Ensures the number is even and between 1 and 100
+            self.secret_number = random.randint(1, 50) * 2  
         else:
             self.secret_number = random.randint(1, 100)
 
